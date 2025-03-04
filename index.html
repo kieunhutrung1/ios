@@ -180,6 +180,28 @@ new Clipboard('.btn');
 <p><a href="https://kieunhutrung1.github.io/ios/tmp/TrollInstallerX/japan-aes-128-cbc-udp-dns.ovpn">Tokyo Pia</a>----<a href="https://kieunhutrung1.github.io/ios/tmp/TrollInstallerX/japan_Streaming-Optimi-aes-128-cbc-udp-dns.ovpn">Japan Streaming PIA</a><a href="http://192.168.138.34:11111/var/mobile/Containers/Shared/AppGroup/F2688F6A-07E5-4B66-8595-E37E0125A628/File%20Provider%20Storage/Backup/">Filza</a></p>
 </block>
 	<block>
+<body>
+      <input type="text" id="inputURL" value="192.168.1.200" placeholder="Nhập thông tin cần ghép với URL">
+    <button id="openLinkButton" onclick="openLink()">Filza</button>
+
+    <script>
+        function openLink() {
+            // B1: Lấy giá trị từ input
+            const inputValue = document.getElementById("inputURL").value;
+
+            // B2: Ghép với URL cơ bản
+            const baseURL = "http://"; // Thay đổi thành URL bạn muốn
+            const fullURL = baseURL + inputValue+":11111/var/mobile/Library/ADManager/";
+            
+
+            // B3: Mở URL trong tab mới
+            window.location.href = fullURL;
+        }
+    </script>
+
+</body>
+</block>
+	<block>
 <figure>
   <img src="./icon/qr.png" alt="Trulli" style="width:100%">
 </figure>
