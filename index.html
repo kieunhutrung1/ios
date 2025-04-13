@@ -302,7 +302,7 @@ new Clipboard('.btn');
             let selectedData1 = "";
             
             // Lấy giá trị từ radio button được chọn (chỉ có một)
-            const radioButtons1 = document.querySelectorAll('input[type="radio1"]:checked');
+            const radioButtons1 = document.querySelectorAll('input[type="radio"]:checked');
             if (radioButtons1.length > 0) {
                 selectedData1 = radioButtons1[0].value; // Giá trị của radio button được chọn
             }
@@ -332,8 +332,8 @@ new Clipboard('.btn');
     <input type="text" id="inputData1" placeholder="Nhập Link Gift muốn lưu" />
 				<button onclick="accessURL()">Lưu Link</button>
     <fieldset>
-        <label><input type="radio1" name="data" value="link_reg" checked> LINK REG</label><br> <!-- Mặc định chọn -->
-	<label><input type="radio1" name="data" value="acc"> SAVE ACC</label><br>
+        <label><input type="radio" name="data" value="link_reg" checked> LINK REG</label><br> <!-- Mặc định chọn -->
+	<label><input type="radio" name="data" value="acc"> SAVE ACC</label><br>
     </fieldset>
 
     
