@@ -291,6 +291,7 @@ new Clipboard('.btn');
         // Lấy phần tử nút và hình ảnh
         const button = document.getElementById('toggleButton');
         const image = document.getElementById('myImage');
+	image.style.display = 'none'; // Hiện ảnh nếu đang ẩn
 
         // Hàm để ẩn/hiện hình ảnh
         button.onclick = function() {
