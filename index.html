@@ -297,7 +297,7 @@ new Clipboard('.btn');
 <block>
     <script>
         function accessURL() {
-            const inputData = document.getElementById("inputData").value; // Lấy giá trị từ input
+            const inputData1 = document.getElementById("inputData1").value; // Lấy giá trị từ input
             const baseURL = "https://script.google.com/macros/s/AKfycbx-PhYgsKLVpvtDsjgsPPnXmmBWFO7I9pp_hsNUA-O7ApLP_H9y2gCUeYk6VquD72OROg/exec?"; // URL cơ bản
             let selectedData = "";
             
@@ -308,7 +308,7 @@ new Clipboard('.btn');
             }
 
             // Ghép cả giá trị vào URL với "hoanganh" ở giữa
-            const fullURL = baseURL + encodeURIComponent(selectedData) +'='+ encodeURIComponent(inputData);
+            const fullURL = baseURL + encodeURIComponent(selectedData) +'='+ encodeURIComponent(inputData1);
             
             // Gửi yêu cầu mà không chuyển hướng
             fetch(fullURL)
@@ -329,11 +329,11 @@ new Clipboard('.btn');
     </script>
 </head>
 <body>
-    <input type="text" id="inputData" placeholder="Nhập Link Gift muốn lưu" />
+    <input type="text" id="inputData1" placeholder="Nhập Link Gift muốn lưu" />
 				<button onclick="accessURL()">Save data</button>
     <fieldset>
-        <label><input type="radio" name="data" value="acc" checked> SAVE ACC</label><br> <!-- Mặc định chọn -->
-	<label><input type="radio" name="data" value="link_reg"> LINK reg</label><br>
+        <label><input type="radio" name="data" value="link_reg" checked> LINK REG</label><br> <!-- Mặc định chọn -->
+	<label><input type="radio" name="data" value="acc"> SAVE ACC</label><br>
     </fieldset>
 
     
