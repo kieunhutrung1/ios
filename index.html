@@ -47,12 +47,12 @@ new Clipboard('.btn');
 </script>
 </block>
 <block>
-    <input type="text" id="foo" placeholder="Nhập tên người dùng" />
+    <input type="text" id="foo1" placeholder="Nhập tên người dùng" />
 
     <button id="generateEmail">Tạo Email</button>
 
     <script>
-        const emailInput = document.getElementById('foo');
+        const emailInput = document.getElementById('foo1');
         const generateEmailButton = document.getElementById('generateEmail');
         const domain = '@kaishime.com'; // Phần đuôi email
 
@@ -62,7 +62,7 @@ new Clipboard('.btn');
             emailInput.value = username ? (username + domain) : '';  // Hiển thị email trong ô nhập
         });
     </script>
-<button class="btn" data-clipboard-target=#foo> Coppy Text</button>
+<button class="btn" data-clipboard-target=#foo1> Coppy Text</button>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.6.1/clipboard.min.js"></script>
 <script type="text/javascript">
 new Clipboard('.btn');
