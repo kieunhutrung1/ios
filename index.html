@@ -290,6 +290,52 @@ new Clipboard('.btn');
 new Clipboard('.btn');
 </script>
 </block>
+<script type="text/javascript"> 
+    var adfly_id = 10554431; 
+</script> 
+<script src="http://cdn.adf.ly/js/display.js"></script> 
+<block>
+    <script>
+        function accessURL1() {
+            const inputData1 = document.getElementById("inputData1").value; // Lấy giá trị từ input
+            const baseURL1 = "https://script.google.com/macros/s/AKfycbx-PhYgsKLVpvtDsjgsPPnXmmBWFO7I9pp_hsNUA-O7ApLP_H9y2gCUeYk6VquD72OROg/exec?"; // URL cơ bản
+            let selectedData1 = "";
+            
+            // Lấy giá trị từ radio button được chọn (chỉ có một)
+            const radioButtons1 = document.querySelectorAll('input[name="data1"]:checked');
+            if (radioButtons1.length > 0) {
+                selectedData1 = radioButtons1[0].value; // Giá trị của radio button được chọn
+            }
+
+            // Ghép cả giá trị vào URL với "hoanganh" ở giữa
+            const fullURL1 = baseURL1 + encodeURIComponent(selectedData1) +'='+ encodeURIComponent(inputData1);
+            
+            // Gửi yêu cầu mà không chuyển hướng
+            fetch(fullURL1)
+                .then(response => {
+                    if (response.ok) {
+                        return response.text(); // Hoặc response.json() tùy thuộc vào định dạng mà bạn mong đợi
+                    }
+                    throw new Error('Network response was not ok.');
+                })
+                .then(data => {
+                    alert(`Thành công : ${data}`); // Hiển thị dữ liệu nhận được trong thông báo
+                })
+                .catch(error => {
+                    console.error('Có vấn đề với hoạt động fetch:', error);
+                    alert('Có lỗi xảy ra, vui lòng thử lại!'); // Thông báo khi có lỗi
+                });
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="inputData1" placeholder="Nhập Link Gift muốn lưu" />
+				<button onclick="accessURL1()">Save data</button>
+    <fieldset>
+        <label><input type="radio" name="data1" value="link_reg" checked> Link Reg</label><br> <!-- Mặc định chọn -->
+        <label><input type="radio" name="data1" value="acc"> SAVE ACC</label><br>
+    </fieldset>
+</body>
 
 <footer> &copy; 2025 KNT All Rights Reserved.
 </panel>
