@@ -298,20 +298,20 @@ new Clipboard('.btn');
     <script>
         function accessURL() {
             const inputData1 = document.getElementById("inputData1").value; // Lấy giá trị từ input
-            const baseURL = "https://script.google.com/macros/s/AKfycbx-PhYgsKLVpvtDsjgsPPnXmmBWFO7I9pp_hsNUA-O7ApLP_H9y2gCUeYk6VquD72OROg/exec?"; // URL cơ bản
-            let selectedData = "";
+            const baseURL1 = "https://script.google.com/macros/s/AKfycbx-PhYgsKLVpvtDsjgsPPnXmmBWFO7I9pp_hsNUA-O7ApLP_H9y2gCUeYk6VquD72OROg/exec?"; // URL cơ bản
+            let selectedData1 = "";
             
             // Lấy giá trị từ radio button được chọn (chỉ có một)
             const radioButtons = document.querySelectorAll('input[type="radio"]:checked');
             if (radioButtons.length > 0) {
-                selectedData = radioButtons[0].value; // Giá trị của radio button được chọn
+                selectedData1 = radioButtons[0].value; // Giá trị của radio button được chọn
             }
 
             // Ghép cả giá trị vào URL với "hoanganh" ở giữa
-            const fullURL = baseURL + encodeURIComponent(selectedData) +'='+ encodeURIComponent(inputData1);
+            const fullURL1 = baseURL1 + encodeURIComponent(selectedData1) +'='+ encodeURIComponent(inputData1);
             
             // Gửi yêu cầu mà không chuyển hướng
-            fetch(fullURL)
+            fetch(fullURL1)
                 .then(response => {
                     if (response.ok) {
                         return response.text(); // Hoặc response.json() tùy thuộc vào định dạng mà bạn mong đợi
