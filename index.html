@@ -143,12 +143,12 @@ new Clipboard('.btn');
     <script>
         async function sendRequest() {
             // Lấy giá trị từ các input
-            var input1 = document.getElementById("input1").value;
-            var input2 = document.getElementById("input2").value;
-            var input3 = document.getElementById("input3").value;
+            var tenmay = document.getElementById("tenmay").value;
+            var link_reggg = document.getElementById("link_reggg").value;
+            var accc = document.getElementById("accc").value;
 
             // Ghép các input lại thành URL
-            var url = "https://script.google.com/macros/s/AKfycbx-PhYgsKLVpvtDsjgsPPnXmmBWFO7I9pp_hsNUA-O7ApLP_H9y2gCUeYk6VquD72OROg/exec?name=" + input1 + "&link_reg=" + input2 + "&acc=" + input3;
+            var url = "https://script.google.com/macros/s/AKfycbx-PhYgsKLVpvtDsjgsPPnXmmBWFO7I9pp_hsNUA-O7ApLP_H9y2gCUeYk6VquD72OROg/exec?name=" + tenmay + "&link_reg=" + link_reggg + "&acc=" + accc;
 
             try {
                 // Gọi đến API đã ghép URL
@@ -168,16 +168,16 @@ new Clipboard('.btn');
     </script>
 <body>
     <div>
-        <label for="input1">Tên Máy :</label>
-        <input type="text" id="input1" placeholder="Nhập phần 1">
+        <label for="tenmay">Tên Máy :</label>
+        <input type="text" id="tenmay" placeholder="Nhập Tên Máy">
     </div>
     <div>
-        <label for="input2">Link  reg :</label>
-        <input type="text" id="input2" placeholder="Nhập phần 2">
+        <label for="link_reggg">Link  reg :</label>
+        <input type="text" id="link_reggg" placeholder="Nhập Link Reg">
     </div>
     <div>
-        <label for="input3">ACC      :</label>
-        <input type="text" id="input3" placeholder="Nhập phần 3">
+        <label for="accc">ACC      :</label>
+        <input type="text" id="accc" placeholder="Thông tin acc">
     </div>
     <button onclick="sendRequest()">Gửi Dữ liệu</button>
 </body>
