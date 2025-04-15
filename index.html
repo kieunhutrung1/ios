@@ -139,53 +139,49 @@ new Clipboard('.btn');
 	
 </block>
 
-
-  <script>
-        async function fetchData() {
+<block>
+    <script>
+        async function sendRequest() {
             // Lấy giá trị từ các input
-            var tenmay = document.getElementById("tenmay").value;
-            var link_regg = document.getElementById("link_regg").value;
-            var accc = document.getElementById("accc").value;
+            var input1 = document.getElementById("input1").value;
+            var input2 = document.getElementById("input2").value;
+            var input3 = document.getElementById("input3").value;
 
-            // Ghép các input lại thành link
-            var link = "https://script.google.com/macros/s/AKfycbx-PhYgsKLVpvtDsjgsPPnXmmBWFO7I9pp_hsNUA-O7ApLP_H9y2gCUeYk6VquD72OROg/exec?name=" + tenmay + "&link_reg=" + link_regg + "&acc=" + accc;
-            document.getElementById("result").innerText = link;
+            // Ghép các input lại thành URL
+            var url = "https://script.google.com/macros/s/AKfycbx-PhYgsKLVpvtDsjgsPPnXmmBWFO7I9pp_hsNUA-O7ApLP_H9y2gCUeYk6VquD72OROg/exec?name=" + input1 + "&link_reg=" + input2 + "&acc=" + input3;
 
             try {
-                // Gọi đến API đã ghép link
-                let apiResponse = await fetch(link);
-                if (!apiResponse.ok) {
-                    throw new Error('Network response was not ok');
+                // Gọi đến API đã ghép URL
+                let response = await fetch(url);
+                if (!response.ok) {
+                    throw new Error('Lỗi: ' + response.status);
                 }
-                let data = await apiResponse.json();
-                
-                // Hiển thị thông báo nhận được từ dữ liệu API
-                let message = `Dữ liệu nhận được: ${JSON.stringify(data, null, 2)}`;
-                alert(message);
+                let data = await response.json();
+
+                // Hiển thị dữ liệu nhận được trong một thông báo
+                alert("Dữ liệu nhận được: " + JSON.stringify(data, null, 2));
             } catch (error) {
                 console.error('Có lỗi xảy ra:', error);
-                alert("Lỗi: " + error.message);
+                alert("Có lỗi xảy ra: " + error.message);
             }
         }
     </script>
-    
 <body>
     <div>
-        <label for="tenmay">Tên Máy:</label>
-        <input type="text" id="tenmay">
+        <label for="input1">Tên Máy :</label>
+        <input type="text" id="input1" placeholder="Nhập phần 1">
     </div>
     <div>
-        <label for="link_regg">Link REG:</label>
-        <input type="text" id="link_regg">
+        <label for="input2">Link  reg :</label>
+        <input type="text" id="input2" placeholder="Nhập phần 2">
     </div>
     <div>
-        <label for="accc">acc:</label>
-        <input type="text" id="accc">
+        <label for="input3">ACC      :</label>
+        <input type="text" id="input3" placeholder="Nhập phần 3">
     </div>
-    <h2>Kết quả link:</h2>
-    <p id="result">http://</p>
-    <button onclick="fetchData()">Lưu Dữ Liệu</button>
+    <button onclick="sendRequest()">Gửi Dữ liệu</button>
 </body>
+</block>	
 
 <block>
 <fieldset>
