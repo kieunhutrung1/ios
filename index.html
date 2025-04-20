@@ -184,6 +184,52 @@ new Clipboard('.btn');
 </block>	
 
 <block>
+    <script>
+        async function sendRequest() {
+            // Lấy giá trị từ các input
+            var tenmay1 = document.getElementById("tenmay1").value;
+            var link_gifts = document.getElementById("link_gifts").value;
+            var sll_gift = document.getElementById("sll_gift").value;
+
+            // Ghép các input lại thành URL
+            var url = "https://script.google.com/macros/s/AKfycbzrlCBkGsDCAPsOjcKJaMEts2HVYzLmReM4SW5-adHlJtsIirm5kNv6LWkjVNGAS3iguA/exec?name_=" + tenmay1 + "&gift_s=" + link_gifts + "&sll_gifts=" + sll_gift;
+
+            try {
+                // Gọi đến API đã ghép URL
+                let response = await fetch(url);
+                if (!response.ok) {
+                    throw new Error('Lỗi: ' + response.status);
+                }
+                let data = await response.json();
+
+                // Hiển thị dữ liệu nhận được trong một thông báo
+                alert("Dữ liệu nhận được: " + JSON.stringify(data, null, 2));
+            } catch (error) {
+                console.error('Có lỗi xảy ra:', error);
+                alert("Có lỗi xảy ra: " + error.message);
+            }
+        }
+    </script>
+<body>
+    <div>
+        <label for="tenmay1">Tên Máy :</label>
+        <input type="text" id="tenmay1" placeholder="Nhập Tên Máy">
+    </div>
+    <div>
+        <label for="link_gifts">Link  Gift :</label>
+        <input type="text" id="link_gifts" placeholder="Nhập Link Reg">
+    </div>
+    <div>
+        <label for="sll_gift">SLL Gift      :</label>
+        <input type="text" id="sll_gift" placeholder="Thông tin acc">
+    </div>
+    <button onclick="sendRequest()">Gửi Dữ liệu</button>
+</body>
+</block>
+
+
+	
+<block>
 <fieldset>
 	<a href="https://www.icloud.com/shortcuts/c76afd51d74347eea9f4c22995f0f25d"><img src="./icon/sc.png" class="icon"><div><div><label><p>Add shotcut Tước 100</p></label><label class="url"><p></p></label></div></div></a>
 </fieldset>
