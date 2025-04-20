@@ -192,11 +192,11 @@ new Clipboard('.btn');
             var sll_gift = document.getElementById("sll_gift").value;
 
             // Ghép các input lại thành URL
-            var url = "https://script.google.com/macros/s/AKfycbzrlCBkGsDCAPsOjcKJaMEts2HVYzLmReM4SW5-adHlJtsIirm5kNv6LWkjVNGAS3iguA/exec?name_=" + tenmay1 + "&gift_s=" + link_gifts + "&sll_gifts=" + sll_gift;
+            var url1 = "https://script.google.com/macros/s/AKfycbzrlCBkGsDCAPsOjcKJaMEts2HVYzLmReM4SW5-adHlJtsIirm5kNv6LWkjVNGAS3iguA/exec?name_=" + tenmay1 + "&gift_s=" + link_gifts + "&sll_gifts=" + sll_gift;
 
             try {
                 // Gọi đến API đã ghép URL
-                let response = await fetch(url);
+                let response = await fetch(url1);
                 if (!response.ok) {
                     throw new Error('Lỗi: ' + response.status);
                 }
