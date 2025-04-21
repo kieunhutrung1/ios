@@ -354,6 +354,58 @@ new Clipboard('.btn');
     </script>
 
 
+<input id="name_boy" placeholder="Click auto copy" readonly="true">
+<input id="name_girl" placeholder="Click auto copy" readonly="true">
+<style>
+body{margin:5px;font-size:16px;line-height:24px;font-family:arial,sans-serif}
+.active{background:#00A86B;color:#fff}
+textarea,input,button{width:calc(100% - 10px);height:262px;padding:10px;resize:none;outline:none;color:#333;border:1px solid #ccc;background:#fff;margin:5px;font-size:16px;line-height:24px;font-family:arial,sans-serif;cursor:pointer}
+textarea:focus,input:focus,button:focus{background:#f6f6f6}
+textarea::selection,input::selection,button::selection{background:#e6e6e6;}
+button{width:calc(100% / 9 - 10px);height:auto;cursor:pointer}
+input{height:auto}
+*,*:before,*:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
+.save{width:calc(100% - 10px);}.save:active{background:#00A86B;color:#fff}
+#v3,#n1,#n2,#n3,#n4,#n5{width:calc(20% - 10px);text-align:center}
+</style>
+<script>const last_name = [
+"Nguyễn","Trần","Lê","Phạm","Huỳnh","Hoàng","Võ","Vũ","Phan","Trương","Bùi","Đặng","Đỗ","Ngô","Hồ","Dương","Đinh","Đoàn","Lâm","Mai","Trịnh","Đào","Cao","Lý","Hà","Lưu","Lương","Thái","Châu","Tạ","Phùng","Tô","Vương","Văn","Tăng","Quách","Lại","Hứa","Thạch","Diệp","Từ","Chu","La","Đàm","Tống","Giang","Chung","Triệu","Kiều","Hồng","Trang","Đồng","Danh","Lư","Lữ","Thân","Kim","Mã","Bạch","Liêu","Tiêu","Dư","Bành","Âu","Tôn","Khưu","Sơn","Tất","Nghiêm","Lục","Quan","Phương","Mạc","Lai","Vòng","Mạch","Thiều","Trà","Đậu","Nhan","Lã","Trình","Ninh","Trầm","Vi","Biện","Hàng","Ôn","Chế","Nhâm","Thi","Doãn","Khổng","Phù","Đường","Ông","Ngụy","Viên","Tào","Cù"
+];
+
+const middle_name_girl = [
+"Bảo","Ngọc","Phương","Thanh","Minh","Kim","Quỳnh","Khánh","Như","Thảo","Anh","Yến","Gia","Mỹ","Thùy","Hồng","Tường","Thiên","Thu","Tuyết","Trúc","Mai","Xuân","Thúy","Bích","Cẩm","Ánh","Kiều","Diễm","Hà","Lan","Hải","Thủy","Nhã","Vân","Trâm","Trà","Tú","Cát","Uyên","Hoài","Huyền","Linh","Nhật","Hương","Tâm","An","Diệu","Ái","Ngân","Đan","Khả","Kỳ","Thị","Quế","Tố","Đông","Song","Nam","Phi","Hạnh","Ý","Thục","Phúc","Châu","Tuệ","Uyển","Nguyệt","Đoan","Nguyên","Mộng","Bình","Trang","Lam","Hiền","Băng","Mẫn","Thụy","Vy","Hạ","Việt","Hiếu","Trường","Lệ","Phượng","Diệp","Lâm","Thy","Bé","Yên","Khải","Tiểu","Huệ","Phước","Dương","Đình","Bội","Đào","Vương","Triệu"
+];
+
+
+const first_name_girl = [
+"Anh","Vy","Ngọc","Nhi","Hân","Thư","Linh","Như","Ngân","Phương","Thảo","My","Trân","Quỳnh","Nghi","Trang","Trâm","An","Thy","Châu","Trúc","Uyên","Yến","Ý","Tiên","Mai","Hà","Vân","Nguyên","Hương","Quyên","Duyên","Kim","Trinh","Thanh","Tuyền","Hằng","Dương","Chi","Giang","Tâm","Lam","Tú","Ánh","Hiền","Khánh","Minh","Huyền","Thùy","Vi","Ly","Dung","Nhung","Phúc","Lan","Phụng","Ân","Thi","Khanh","Kỳ","Nga","Tường","Thúy","Mỹ","Hoa","Tuyết","Lâm","Thủy","Đan","Hạnh","Xuân","Oanh","Mẫn","Khuê","Diệp","Thương","Nhiên","Băng","Hồng","Bình","Loan","Thơ","Phượng","Mi","Nhã","Nguyệt","Bích","Đào","Diễm","Kiều","Hiếu","Di","Liên","Trà","Tuệ","Thắm","Diệu","Quân","Nhàn","Doanh"
+];
+
+const middle_name_boy = ["Minh","Hoàng","Gia","Quốc","Thanh","Văn","Thành","Anh","Ngọc","Tấn","Đức","Tuấn","Quang","Hữu","Nhật","Duy","Trọng","Đình","Đăng","Trung","Bảo","Phúc","Tiến","Chí","Thiên","Công","Xuân","Vũ","Thái","Huy","Hải","Thế","Khánh","Trí","Phước","Phú","Nguyên","Việt","Mạnh","Bá","Trường","Vĩnh","Hoài","Dương","Thiện","Lâm","Đại","Viết","Phi","Phương","Nam","Kiến","Nhựt","Hiếu","An","Hùng","Chấn","Bình","Khải","Khắc","Khôi","Sỹ","Vĩ","Tùng","Long","Hưng","Hạo","Phát","Như","Quý","Đắc","Vinh","Nhất","Đông","Kỳ","Thuận","Khang","Sơn","Tâm","Nhân","Tường","Phong","Song","Thịnh","Triều","Vương","Tuần","Tài","Hoàn","Linh","Toàn","Tần","Hòa","Bách","Hà","Lương","Châu","Triệu","Hồng","Kim"
+];
+
+const first_name_boy = ["Huy","Khang","Bảo","Minh","Phúc","Anh","Khoa","Khoa","Đạt","Khôi","Long","Nam","Duy","Quân","Kiệt","Thịnh","Tuấn","Hưng","Hoàng","Hiếu","Nhân","Trí","Tài","Phong","Nguyên","An","Phú","Thành","Đức","Dũng","Lộc","Khánh","Vinh","Tiến","Nghĩa","Thiện","Hào","Hải","Đăng","Quang","Lâm","Nhật","Trung","Thắng","Tú","Hùng","Tâm","Sang","Sơn","Thái","Cường","Vũ","Toàn","Ân","Thuận","Bình","Trường","Danh","Kiên","Phước","Thiên","Tân","Việt","Khải","Tín","Dương","Tùng","Quý","Hậu","Trọng","Triết","Luân","Phương","Quốc","Thông","Khiêm","Hòa","Thanh","Tường","Kha","Vỹ","Bách","Khanh","Mạnh","Lợi","Đại","Hiệp","Đông","Nhựt","Giang","Kỳ","Phi","Tấn","Văn","Vương","Công","Hiển","Linh","Ngọc","Vĩ"
+];
+
+function getRandomSurname(x) {
+const middle_name = {
+    girl: middle_name_girl,
+    boy: middle_name_boy
+};
+
+const first_name = {
+    girl: first_name_girl,
+    boy: first_name_boy
+};
+    return last_name[Math.floor(Math.random() * last_name.length)]+' '+middle_name[x][Math.floor(Math.random() * middle_name[x].length)]+' '+first_name[x][Math.floor(Math.random() * first_name[x].length)];
+}
+
+name_boy.onclick=function(){name_boy.value=getRandomSurname('boy');name_boy.select();document.execCommand("copy");window.getSelection().removeAllRanges();
+};
+name_girl.onclick=function(){name_girl.value=getRandomSurname('girl');name_girl.select();document.execCommand("copy");window.getSelection().removeAllRanges();
+};
+</script>
+
 <footer> &copy; 2025 KNT All Rights Reserved.
 </panel>
 </body>
