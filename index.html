@@ -404,6 +404,7 @@ femaleNames=["Mary","Patricia","Jennifer","Linda","Elizabeth","Barbara","Susan",
 v1.onclick=function(){if([0,1][Math.floor(Math.random()*[0,1].length)]>0){v1.value=maleNames[Math.floor(Math.random()*maleNames.length)]}else{v1.value=femaleNames[Math.floor(Math.random()*femaleNames.length)]};v1.select();document.execCommand("copy");window.getSelection().removeAllRanges();};
 v2.onclick=function(){v2.value=lastName[Math.floor(Math.random()*lastName.length)];v2.select();document.execCommand("copy");window.getSelection().removeAllRanges();};
 </script>
+	<block>
 	  <script>
         async function fetchData() {
             const apiUrl = "https://script.google.com/macros/s/AKfycbyRRal4gWPKAXs8Yp3Zt8tjq2RwbCHstJZPDSPRSe1LgzTd6q81NpCwVWyK1dCb7fNqig/exec"; // URL giả lập, thay bằng API của bạn
@@ -637,6 +638,7 @@ v2.onclick=function(){v2.value=lastName[Math.floor(Math.random()*lastName.length
         </script>
         </block>
     </div>
+	</block>
     <button onclick="fetchData()">Lấy Dữ liệu</button>
 <footer> &copy; 2025 KNT All Rights Reserved.
 </panel>
