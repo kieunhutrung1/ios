@@ -334,7 +334,7 @@ new Clipboard('.btn');
     <figure id="imageWrapper">
         <img id="myImage" src="./icon/wf.png" alt="Trulli" style="width:100%">
     </figure>
-
+<block>
     <script>
         // Lấy phần tử nút và hình ảnh
         const button = document.getElementById('toggleButton');
@@ -404,6 +404,7 @@ femaleNames=["Mary","Patricia","Jennifer","Linda","Elizabeth","Barbara","Susan",
 v1.onclick=function(){if([0,1][Math.floor(Math.random()*[0,1].length)]>0){v1.value=maleNames[Math.floor(Math.random()*maleNames.length)]}else{v1.value=femaleNames[Math.floor(Math.random()*femaleNames.length)]};v1.select();document.execCommand("copy");window.getSelection().removeAllRanges();};
 v2.onclick=function(){v2.value=lastName[Math.floor(Math.random()*lastName.length)];v2.select();document.execCommand("copy");window.getSelection().removeAllRanges();};
 </script>
+	</block>
 	<block>
 	  <script>
         async function fetchData() {
