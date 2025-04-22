@@ -404,7 +404,240 @@ femaleNames=["Mary","Patricia","Jennifer","Linda","Elizabeth","Barbara","Susan",
 v1.onclick=function(){if([0,1][Math.floor(Math.random()*[0,1].length)]>0){v1.value=maleNames[Math.floor(Math.random()*maleNames.length)]}else{v1.value=femaleNames[Math.floor(Math.random()*femaleNames.length)]};v1.select();document.execCommand("copy");window.getSelection().removeAllRanges();};
 v2.onclick=function(){v2.value=lastName[Math.floor(Math.random()*lastName.length)];v2.select();document.execCommand("copy");window.getSelection().removeAllRanges();};
 </script>
-	
+	  <script>
+        async function fetchData() {
+            const apiUrl = "https://script.google.com/macros/s/AKfycbyRRal4gWPKAXs8Yp3Zt8tjq2RwbCHstJZPDSPRSe1LgzTd6q81NpCwVWyK1dCb7fNqig/exec"; // URL giả lập, thay bằng API của bạn
+
+            try {
+                // Gọi đến API
+                let response = await fetch(apiUrl);
+                if (!response.ok) {
+                    throw new Error('Lỗi: ' + response.status);
+                }
+
+                let data = await response.json();
+                
+                // Giả sử API trả về một đối tượng có thuộc tính "title"
+                // Cập nhật dữ liệu vào ô input
+                document.getElementById("dataInputsheets").value = data.content.names[0] || 'Không có dữ liệu';
+				document.getElementById("dataInputsheets1").value = data.content.names[1] || 'Không có dữ liệu';
+                document.getElementById("dataInputsheets2").value = data.content.names[2] || 'Không có dữ liệu';
+				document.getElementById("dataInputsheets3").value = data.content.names[3] || 'Không có dữ liệu';
+                document.getElementById("dataInputsheets4").value = data.content.names[4] || 'Không có dữ liệu';
+				document.getElementById("dataInputsheets5").value = data.content.names[5] || 'Không có dữ liệu';
+                document.getElementById("dataInputsheets6").value = data.content.names[6] || 'Không có dữ liệu';
+				document.getElementById("dataInputsheets7").value = data.content.names[7] || 'Không có dữ liệu';
+                document.getElementById("dataInputsheets8").value = data.content.names[8] || 'Không có dữ liệu';
+				document.getElementById("dataInputsheets9").value = data.content.names[9] || 'Không có dữ liệu';
+                document.getElementById("dataInputsheets10").value = data.content.names[10] || 'Không có dữ liệu';
+				document.getElementById("dataInputsheets11").value = data.content.names[11] || 'Không có dữ liệu';
+                document.getElementById("dataInputsheets12").value = data.content.names[12] || 'Không có dữ liệu';
+				document.getElementById("dataInputsheets13").value = data.content.names[13] || 'Không có dữ liệu';
+                document.getElementById("dataInputsheets14").value = data.content.names[14] || 'Không có dữ liệu';
+				document.getElementById("dataInputsheets15").value = data.content.names[15] || 'Không có dữ liệu';
+                document.getElementById("dataInputsheets16").value = data.content.names[16] || 'Không có dữ liệu';
+				document.getElementById("dataInputsheets17").value = data.content.names[17] || 'Không có dữ liệu';
+                document.getElementById("dataInputsheets18").value = data.content.names[18] || 'Không có dữ liệu';
+				document.getElementById("dataInputsheets19").value = data.content.names[19] || 'Không có dữ liệu';
+                document.getElementById("dataInputsheets20").value = data.content.names[20] || 'Không có dữ liệu';
+                document.getElementById("dataInputsheets21").value = data.content.names[21] || 'Không có dữ liệu';
+            } catch (error) {
+                console.error('Có lỗi xảy ra:', error);
+                alert("Có lỗi xảy ra: " + error.message);
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        div {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+		<block>
+        <input type="text" id="dataInputsheets" placeholder="Dữ liệu sẽ xuất hiện ở đây" readonly>
+        <button class="btn" data-clipboard-target=#dataInputsheets> Coppy Text 2</button>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.6.1/clipboard.min.js"></script>
+        <script type="text/javascript">
+        new Clipboard('.btn');
+        </script>
+        </block>
+		<block>
+        <input type="text" id="dataInputsheets1" placeholder="Dữ liệu sẽ xuất hiện ở đây" readonly>
+        <button class="btn" data-clipboard-target=#dataInputsheets1> Coppy Text 3</button>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.6.1/clipboard.min.js"></script>
+        <script type="text/javascript">
+        new Clipboard('.btn');
+        </script>
+        </block>
+        <block>
+        <input type="text" id="dataInputsheets2" placeholder="Dữ liệu sẽ xuất hiện ở đây" readonly>
+        <button class="btn" data-clipboard-target=#dataInputsheets2> Coppy Text 4</button>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.6.1/clipboard.min.js"></script>
+        <script type="text/javascript">
+        new Clipboard('.btn');
+        </script>
+        </block>
+        <block>
+        <input type="text" id="dataInputsheets3" placeholder="Dữ liệu sẽ xuất hiện ở đây" readonly>
+        <button class="btn" data-clipboard-target=#dataInputsheets3> Coppy Text 5</button>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.6.1/clipboard.min.js"></script>
+        <script type="text/javascript">
+        new Clipboard('.btn');
+        </script>
+        </block>
+		<block>
+        <input type="text" id="dataInputsheets4" placeholder="Dữ liệu sẽ xuất hiện ở đây" readonly>
+        <button class="btn" data-clipboard-target=#dataInputsheets4> Coppy Text 6</button>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.6.1/clipboard.min.js"></script>
+        <script type="text/javascript">
+        new Clipboard('.btn');
+        </script>
+        </block>
+        		<block>
+        <input type="text" id="dataInputsheets5" placeholder="Dữ liệu sẽ xuất hiện ở đây" readonly>
+        <button class="btn" data-clipboard-target=#dataInputsheets5> Coppy Text 7</button>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.6.1/clipboard.min.js"></script>
+        <script type="text/javascript">
+        new Clipboard('.btn');
+        </script>
+        </block>
+        <block>
+        <input type="text" id="dataInputsheets6" placeholder="Dữ liệu sẽ xuất hiện ở đây" readonly>
+        <button class="btn" data-clipboard-target=#dataInputsheets6> Coppy Text 8</button>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.6.1/clipboard.min.js"></script>
+        <script type="text/javascript">
+        new Clipboard('.btn');
+        </script>
+        </block>
+		<block>
+        <input type="text" id="dataInputsheets7" placeholder="Dữ liệu sẽ xuất hiện ở đây" readonly>
+        <button class="btn" data-clipboard-target=#dataInputsheets7> Coppy Text 9</button>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.6.1/clipboard.min.js"></script>
+        <script type="text/javascript">
+        new Clipboard('.btn');
+        </script>
+        </block>
+        		<block>
+        <input type="text" id="dataInputsheets8" placeholder="Dữ liệu sẽ xuất hiện ở đây" readonly>
+        <button class="btn" data-clipboard-target=#dataInputsheets8> Coppy Text 10</button>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.6.1/clipboard.min.js"></script>
+        <script type="text/javascript">
+        new Clipboard('.btn');
+        </script>
+        </block>
+        <block>
+        <input type="text" id="dataInputsheets9" placeholder="Dữ liệu sẽ xuất hiện ở đây" readonly>
+        <button class="btn" data-clipboard-target=#dataInputsheets9> Coppy Text 11</button>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.6.1/clipboard.min.js"></script>
+        <script type="text/javascript">
+        new Clipboard('.btn');
+        </script>
+        </block>
+		<block>
+        <input type="text" id="dataInputsheets10" placeholder="Dữ liệu sẽ xuất hiện ở đây" readonly>
+        <button class="btn" data-clipboard-target=#dataInputsheets10> Coppy Text 12</button>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.6.1/clipboard.min.js"></script>
+        <script type="text/javascript">
+        new Clipboard('.btn');
+        </script>
+        </block>
+        		<block>
+        <input type="text" id="dataInputsheets11" placeholder="Dữ liệu sẽ xuất hiện ở đây" readonly>
+        <button class="btn" data-clipboard-target=#dataInputsheets11> Coppy Text 13</button>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.6.1/clipboard.min.js"></script>
+        <script type="text/javascript">
+        new Clipboard('.btn');
+        </script>
+        </block>
+        <block>
+        <input type="text" id="dataInputsheets12" placeholder="Dữ liệu sẽ xuất hiện ở đây" readonly>
+        <button class="btn" data-clipboard-target=#dataInputsheets12> Coppy Text 14</button>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.6.1/clipboard.min.js"></script>
+        <script type="text/javascript">
+        new Clipboard('.btn');
+        </script>
+        </block>
+        <block>
+        <input type="text" id="dataInputsheets13" placeholder="Dữ liệu sẽ xuất hiện ở đây" readonly>
+        <button class="btn" data-clipboard-target=#dataInputsheets13> Coppy Text 15</button>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.6.1/clipboard.min.js"></script>
+        <script type="text/javascript">
+        new Clipboard('.btn');
+        </script>
+        </block>
+		<block>
+        <input type="text" id="dataInputsheets14" placeholder="Dữ liệu sẽ xuất hiện ở đây" readonly>
+        <button class="btn" data-clipboard-target=#dataInputsheets14> Coppy Text 16</button>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.6.1/clipboard.min.js"></script>
+        <script type="text/javascript">
+        new Clipboard('.btn');
+        </script>
+        </block>
+        		<block>
+        <input type="text" id="dataInputsheets15" placeholder="Dữ liệu sẽ xuất hiện ở đây" readonly>
+        <button class="btn" data-clipboard-target=#dataInputsheets15> Coppy Text 17</button>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.6.1/clipboard.min.js"></script>
+        <script type="text/javascript">
+        new Clipboard('.btn');
+        </script>
+        </block>
+        <block>
+        <input type="text" id="dataInputsheets16" placeholder="Dữ liệu sẽ xuất hiện ở đây" readonly>
+        <button class="btn" data-clipboard-target=#dataInputsheets16> Coppy Text 18</button>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.6.1/clipboard.min.js"></script>
+        <script type="text/javascript">
+        new Clipboard('.btn');
+        </script>
+        </block>
+		<block>
+        <input type="text" id="dataInputsheets17" placeholder="Dữ liệu sẽ xuất hiện ở đây" readonly>
+        <button class="btn" data-clipboard-target=#dataInputsheets17> Coppy Text 19</button>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.6.1/clipboard.min.js"></script>
+        <script type="text/javascript">
+        new Clipboard('.btn');
+        </script>
+        </block>
+        		<block>
+        <input type="text" id="dataInputsheets18" placeholder="Dữ liệu sẽ xuất hiện ở đây" readonly>
+        <button class="btn" data-clipboard-target=#dataInputsheets18> Coppy Text 20</button>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.6.1/clipboard.min.js"></script>
+        <script type="text/javascript">
+        new Clipboard('.btn');
+        </script>
+        </block>
+        <block>
+        <input type="text" id="dataInputsheets19" placeholder="Dữ liệu sẽ xuất hiện ở đây" readonly>
+        <button class="btn" data-clipboard-target=#dataInputsheets19> Coppy Text 21</button>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.6.1/clipboard.min.js"></script>
+        <script type="text/javascript">
+        new Clipboard('.btn');
+        </script>
+        </block>
+		<block>
+        <input type="text" id="dataInputsheets20" placeholder="Dữ liệu sẽ xuất hiện ở đây" readonly>
+        <button class="btn" data-clipboard-target=#dataInputsheets20> Coppy Text 22</button>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.6.1/clipboard.min.js"></script>
+        <script type="text/javascript">
+        new Clipboard('.btn');
+        </script>
+        </block>
+        		<block>
+        <input type="text" id="dataInputsheets21" placeholder="Dữ liệu sẽ xuất hiện ở đây" readonly>
+        <button class="btn" data-clipboard-target=#dataInputsheets21> Coppy Text 23</button>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.6.1/clipboard.min.js"></script>
+        <script type="text/javascript">
+        new Clipboard('.btn');
+        </script>
+        </block>
+    </div>
+    <button onclick="fetchData()">Lấy Dữ liệu</button>
 <footer> &copy; 2025 KNT All Rights Reserved.
 </panel>
 </body>
